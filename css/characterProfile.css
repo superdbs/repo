@@ -41,14 +41,14 @@ nav{
 nav li, nav a, nav button{
 	font-family: "Montserrat", 'sans-serif';
 	font-weight: 500;
-	font-size: 19px;
+	font-size: max(1.5vw, 9px);
 	color: black;
 	text-decoration: none;  /*Remove link highlighting & underline*/
 }
 
 .logo{
 	cursor: pointer; /*Turns into a pointer when hovered over*/
-	width: 70px;
+	width: max(5vw, 50px);
 	position: absolute;
 	left: 5px;
 }
@@ -68,7 +68,7 @@ nav li, nav a, nav button{
 }
 
 button{
-	padding: 9px 25px;
+	padding: 9px 20px;
 	background-color: rgba(0, 171, 239, 1);
 	border: none;
 	border-radius: 50px;
@@ -84,7 +84,7 @@ button:hover{
 /****************************************************/
 article{
 	grid-area: article;
-	margin: var(--space-after-nav) 0 20px 10%;
+	margin: var(--space-after-nav) 0 20px 6%;
 	border: 2px solid black;
 	background-color: white;
 	border-radius: 35px;
@@ -130,7 +130,7 @@ aside{
 	grid-area: aside;
 	border: 2px solid black;
 	border-radius: 5px;
-	margin: var(--space-after-nav) 25% 20px 0;
+	margin: var(--space-after-nav) 18.5% 20px 0;
 	position: relative;
 	left: 10%;
 	background-color: white;
@@ -144,7 +144,7 @@ aside h1{
 
 #characterImage{
 	width: 85%;
-	min-width: 200px;
+	min-width: 100px;
 	display: block;
 	margin: 0 auto;
 }
@@ -156,18 +156,18 @@ aside h1{
 	background-color: var(--aside-color-right);
 	text-align: center;
 	width: 100%;
-	font-size: 20px;
+	font-size: min(20px, 2.2vw);
 }
 
 .stats td:nth-child(1), .stats th:nth-child(1){
 	width: 30%;
 	font-family: Garamond;
 	background: var(--aside-color-left);
+	font-size: min(20px, 2.2vw);
 }
 
 .stats td:nth-child(1){
 	font-family: Roboto, Garamond;
-	font-size: 20px;
 }
 
 .filled-in{
@@ -183,7 +183,7 @@ aside h1{
 /***********************Traits Sections**********************/
 .traits{
 	width: 100%;
-	font-size: 20px;
+	font-size: min(20px, 2vw);
 	border: 1px solid white;
 	font-family: 'Roboto', 'sans-serif';
 }

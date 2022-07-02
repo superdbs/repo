@@ -18,21 +18,21 @@ nav{
   box-sizing: border-box;
   margin: 0;
   padding: 30px 10%;
-    background-color: darkorange;
-    height: 5vw;
+  background-color: darkorange;
+  height: 5vw;
 }
 
 nav li, nav a, nav button{
   font-family: "Montserrat", 'sans-serif';
   font-weight: 500;
-  font-size: 19px;
+  font-size: max(1.5vw, 9px);
   color: black;
   text-decoration: none;  /*Remove link highlighting & underline*/
 }
 
 .logo{
   cursor: pointer; /*Turns into a pointer when hovered over*/
-  width: 70px;
+  width: max(5vw, 50px);
   position: absolute;
   left: 5px;
 }
@@ -52,7 +52,7 @@ nav li, nav a, nav button{
 }
 
 button{
-  padding: 9px 25px;
+  padding: 9px 20px;
   background-color: rgba(0, 171, 239, 1);
   border: none;
   border-radius: 50px;
@@ -78,23 +78,24 @@ button:hover{
 main {
   display: grid;
   grid-template-columns: 25vw 25vw 25vw;
-  gap: 55px;
+  gap: 5vw;
   margin-top: 44px;
-  grid-auto-rows: calc(32vw + 70px);
+  grid-auto-rows: 32vw;
 }
 
 h2 {
   font-family: Poppins;
-  font-size: 18px;
+  font-size: 1.5vw;
   font-weight: 600;
   letter-spacing: 0.3px;
   text-align: center;
   color: #ffa500;
+  margin-top: 0.03vw;
 }
 
 .character img {
   width: 25vw;
-  height: 32vw;
+  height: 28vw;
   border-bottom: solid 1px black;
   background-color: #ffa500;
 }
