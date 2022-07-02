@@ -1,0 +1,105 @@
+/*Imports*/
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+
+body{
+  background-color: lightgoldenrodyellow;
+  margin: 0;
+}
+
+/****************************************************/
+/****************  NAV & CHILDREN  ******************/
+/****************************************************/
+nav{
+  grid-area: nav;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 30px 10%;
+    background-color: darkorange;
+    height: 5vw;
+}
+
+nav li, nav a, nav button{
+  font-family: "Montserrat", 'sans-serif';
+  font-weight: 500;
+  font-size: 19px;
+  color: black;
+  text-decoration: none;  /*Remove link highlighting & underline*/
+}
+
+.logo{
+  cursor: pointer; /*Turns into a pointer when hovered over*/
+  width: 70px;
+  position: absolute;
+  left: 5px;
+}
+
+.navLinks{
+  list-style: none;
+}
+
+.navLinks li{
+  display: inline-block;
+  padding: 0px 20px;
+}
+
+.navLinks li a:hover{
+  transition: all 0.3s ease 0s;
+  color: white;
+}
+
+button{
+  padding: 9px 25px;
+  background-color: rgba(0, 171, 239, 1);
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease 0s;
+}
+
+button:hover{
+  background-color: rgba(0, 171, 239, 0.6);
+}
+
+/****************************************************/
+/******************  CHARACTERS  ********************/
+/****************************************************/
+
+.container{
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  margin-bottom: 50px;
+}
+
+main {
+  display: grid;
+  grid-template-columns: 25vw 25vw 25vw;
+  gap: 55px;
+  margin-top: 44px;
+  grid-auto-rows: calc(32vw + 70px);
+}
+
+h2 {
+  font-family: Poppins;
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+  text-align: center;
+  color: #ffa500;
+}
+
+.character img {
+  width: 25vw;
+  height: 32vw;
+  border-bottom: solid 1px black;
+  background-color: #ffa500;
+}
+
+.character {
+  box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.5); /*h-offset, v-offset, blur, radius*/
+  background-color: white;
+}

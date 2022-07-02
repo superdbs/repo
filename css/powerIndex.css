@@ -1,0 +1,350 @@
+/*Imports*/
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+
+html{
+  /*global variables*/
+  --trapezoid-width-scale: 45px;
+  --dist-from-top-scale: 58px;
+  --dist-from-top-shift: 150px;
+  --line-width: 70px;
+  --margin-left-offset-scale: 16px;
+  --margin-left-offset-shift: 49%;
+}
+
+body{
+  background: lightgoldenrodyellow;
+  margin: 0;
+}
+
+/****************************************************/
+/****************  NAV & CHILDREN  ******************/
+/****************************************************/
+nav{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 30px 10%;
+  background-color: darkorange;
+  height: 80px;
+  margin-bottom: 55px;
+}
+
+nav li, nav a, nav button{
+  font-family: "Montserrat", 'sans-serif';
+  font-weight: 500;
+  font-size: 19px;
+  color: black;
+  text-decoration: none;  /*Remove link highlighting & underline*/
+}
+
+.logo{
+  cursor: pointer; /*Turns into a pointer when hovered over*/
+  width: 70px;
+  position: absolute;
+  left: 5px;
+}
+
+.navLinks{
+  list-style: none;
+}
+
+.navLinks li{
+  display: inline-block;
+  padding: 0px 20px;
+}
+
+.navLinks li a:hover{
+  transition: all 0.3s ease 0s;
+  color: white;
+}
+
+button{
+  padding: 9px 25px;
+  background-color: rgba(0, 171, 239, 1);
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease 0s;
+}
+
+button:hover{
+  background-color: rgba(0, 171, 239, 0.6);
+}
+
+
+/**********************************************/
+/*****************Pyramid Figure***************/
+/**********************************************/
+
+/*******************Trapezoids*****************/
+.baseTrapezoid{
+  margin: 0 auto;  /*Centers trapezoids*/
+  border-right: calc(0.5 * var(--trapezoid-width-scale)) solid transparent;
+  border-left: calc(0.5 * var(--trapezoid-width-scale))  solid transparent;
+  border-bottom-width: var(--trapezoid-width-scale);
+  border-bottom-style: solid;
+  margin-bottom: calc(1/3 * var(--trapezoid-width-scale)); /*Used for shadow*/
+}
+
+.trapezoid9 {
+  width: calc(0*var(--trapezoid-width-scale));
+  border-bottom-color: lightblue;
+  box-shadow: 0 calc(1/3 * var(--trapezoid-width-scale)) skyblue; /*horiz bar thickness, vert bar thickness, color*/
+}
+
+.trapezoid8 {
+  width: calc(1*var(--trapezoid-width-scale));
+  border-bottom-color: green;
+  box-shadow: 0 calc(1/3 * var(--trapezoid-width-scale)) darkgreen;
+}
+
+.trapezoid7 {
+  width: calc(2*var(--trapezoid-width-scale));
+  border-bottom-color: yellow;
+  box-shadow: 0 calc(1/3 * var(--trapezoid-width-scale)) goldenrod;
+}
+
+.trapezoid6 {
+  width: calc(3*var(--trapezoid-width-scale));
+  border-bottom-color: orange;
+  box-shadow: 0 calc(1/3 * var(--trapezoid-width-scale)) darkorange;
+}
+
+.trapezoid5 {
+  width: calc(4*var(--trapezoid-width-scale));
+  border-bottom-color: red;
+  box-shadow: 0 calc(1/3 * var(--trapezoid-width-scale)) darkred;
+}
+
+.trapezoid4 {
+  width: calc(5*var(--trapezoid-width-scale));
+  border-bottom-color: lightblue;
+  box-shadow: 0 calc(1/3 * var(--trapezoid-width-scale)) skyblue;
+}
+
+.trapezoid3 {
+  width: calc(6*var(--trapezoid-width-scale));
+  border-bottom-color: green;
+  box-shadow: 0 calc(1/3 * var(--trapezoid-width-scale)) darkgreen;
+}
+
+.trapezoid2 {
+  width: calc(7*var(--trapezoid-width-scale));
+  border-bottom-color: yellow;
+  box-shadow: 0 calc(1/3 * var(--trapezoid-width-scale)) goldenrod;
+}
+
+.trapezoid1 {
+  width: calc(8*var(--trapezoid-width-scale));
+  border-bottom-color: orange;
+  box-shadow: 0 calc(1/3 * var(--trapezoid-width-scale)) darkorange;
+}
+
+.trapezoid0 {
+  width: calc(9*var(--trapezoid-width-scale));
+  border-bottom-color: red;
+  box-shadow: 0 calc(1/3 * var(--trapezoid-width-scale)) darkred
+}
+
+/*****************LINE/VALUE*******************/
+.baseLineValue {
+  font-size: 12px;
+  position: absolute;
+}
+
+.line {
+  display: inline-block;
+  height: 1px;
+}
+
+.value {
+  font-size: 16px;
+}
+
+.lineValue9 {
+  top: calc(0*var(--dist-from-top-scale) + var(--dist-from-top-shift));
+  margin-left: calc(0*var(--margin-left-offset-scale) + var(--margin-left-offset-shift) - 18px);
+  color: skyblue;
+}
+
+.lineValue9 .line {
+  width: var(--line-width);
+  background: skyblue;
+}
+
+.lineValue8 {
+  top: calc(1*var(--dist-from-top-scale) + var(--dist-from-top-shift));
+  margin-left: calc(1*var(--margin-left-offset-scale) + var(--margin-left-offset-shift) - 15px);
+  color: green;
+}
+
+.lineValue8 .line {
+  width: var(--line-width);
+  background: green;
+}
+
+.lineValue7 {
+  top: calc(2*var(--dist-from-top-scale) + var(--dist-from-top-shift));
+  margin-left: calc(2*var(--margin-left-offset-scale) + var(--margin-left-offset-shift));
+  color: goldenrod;
+}
+
+.lineValue7 .line {
+  width: var(--line-width);
+  background: yellow;
+}
+
+.lineValue6 {
+  top: calc(3*var(--dist-from-top-scale) + var(--dist-from-top-shift));
+  margin-left: calc(3*var(--margin-left-offset-scale) + var(--margin-left-offset-shift));
+  color: orange;
+}
+
+.lineValue6 .line {
+  width: var(--line-width);
+  background: orange;
+}
+
+.lineValue5 {
+  top: calc(4*var(--dist-from-top-scale) + var(--dist-from-top-shift));
+  margin-left: calc(4*var(--margin-left-offset-scale) + var(--margin-left-offset-shift));
+  color: red;
+}
+
+.lineValue5 .line {
+  width: var(--line-width);
+  background: red;
+}
+
+.lineValue4 {
+  top: calc(5*var(--dist-from-top-scale) + var(--dist-from-top-shift));
+  margin-left: calc(5*var(--margin-left-offset-scale) + var(--margin-left-offset-shift));
+  color: skyblue;
+}
+
+.lineValue4 .line {
+  width: var(--line-width);
+  background: skyblue;
+}
+
+.lineValue3 {
+  top: calc(6*var(--dist-from-top-scale) + var(--dist-from-top-shift));
+  margin-left: calc(6*var(--margin-left-offset-scale) + var(--margin-left-offset-shift));
+  color: green;
+}
+
+.lineValue3 .line {
+  width: var(--line-width);
+  background: green;
+}
+
+.lineValue2 {
+  top: calc(7*var(--dist-from-top-scale) + var(--dist-from-top-shift));
+  margin-left: calc(7*var(--margin-left-offset-scale) + var(--margin-left-offset-shift));
+  color: goldenrod;
+}
+
+.lineValue2 .line {
+  width: var(--line-width);
+  background: yellow;
+}
+
+.lineValue1 {
+  top: calc(8*var(--dist-from-top-scale) + var(--dist-from-top-shift));
+  margin-left: calc(8*var(--margin-left-offset-scale) + var(--margin-left-offset-shift));
+  color: orange;
+}
+
+.lineValue1 .line {
+  width: var(--line-width);
+  background: orange;
+}
+
+.lineValue0 {
+  top: calc(9*var(--dist-from-top-scale) + var(--dist-from-top-shift));
+  margin-left: calc(9*var(--margin-left-offset-scale) + var(--margin-left-offset-shift));
+  color: red;
+}
+
+.lineValue0 .line {
+  width: var(--line-width);
+  background: red;
+}
+
+/**********************Text********************/
+.baseText {
+  position: absolute;
+  font-size: 18px;
+  color: black;
+  left: 0;
+  right: 0;
+  text-align: center;
+}
+
+.text9 {
+  top: calc(0*var(--dist-from-top-scale) + var(--dist-from-top-shift));
+}
+
+.text8 {
+  top: calc(1*var(--dist-from-top-scale) + var(--dist-from-top-shift));
+}
+
+.text7 {
+  top: calc(2*var(--dist-from-top-scale) + var(--dist-from-top-shift));
+}
+
+.text6 {
+  top: calc(3*var(--dist-from-top-scale) + var(--dist-from-top-shift));
+}
+
+.text5 {
+  top: calc(4*var(--dist-from-top-scale) + var(--dist-from-top-shift));
+}
+
+.text4 {
+  top: calc(5*var(--dist-from-top-scale) + var(--dist-from-top-shift));
+}
+
+.text3 {
+  top: calc(6*var(--dist-from-top-scale) + var(--dist-from-top-shift));
+}
+
+.text2 {
+  top: calc(7*var(--dist-from-top-scale) + var(--dist-from-top-shift));
+}
+
+.text1 {
+  top: calc(8*var(--dist-from-top-scale) + var(--dist-from-top-shift));
+}
+
+.text0 {
+  top: calc(9*var(--dist-from-top-scale) + var(--dist-from-top-shift));
+}
+
+/**********************************************/
+/*********************Article******************/
+/**********************************************/
+
+article{
+  border: 2px solid black;
+  background-color: white;
+  border-radius: 35px;
+  width: 77%;
+  margin: 0 auto;
+  margin-top: 60px;
+  margin-bottom: 20px;
+}
+
+article h2, p{
+  margin-left: 20px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+article p{
+  font-size: 18px;
+  margin-right: 10px;
+}
