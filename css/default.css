@@ -79,7 +79,6 @@ button:hover{
 .bookCover{
 	height: auto;
 	width: 35vw;
-	border: solid black 1px;
     display:inline-block;
     margin-bottom: 30px;
     margin-top: 20px;
